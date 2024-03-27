@@ -1,0 +1,33 @@
+@use "../../Styles/reset" as *;
+@use "../../Styles/color" as *;
+
+.card{
+    padding: 20px;
+}
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid black; // change this.
+    &__image{
+        width: 8rem;
+    }
+    &__description{
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card{
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .card{
+        width: 35%
+    }
+}
