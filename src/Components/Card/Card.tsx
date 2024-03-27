@@ -1,4 +1,5 @@
 import "./Card.scss";
+// add content in the back? if i have time. 
 
 type CardProps = {
   name: string;
@@ -7,6 +8,7 @@ type CardProps = {
 };
 
 const Card = ({ name, description, image }: CardProps) => {
+
   return (
   <div className="card">
     <div className="card-container">

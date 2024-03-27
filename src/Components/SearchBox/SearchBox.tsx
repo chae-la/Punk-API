@@ -12,6 +12,7 @@ const SearchBox = ({name, searchTerm, handleInput} : SearchBoxProps) => {
     return(
         <div className="search-box">
             <input
+            placeholder="Search Our Collection..."
             type="text"
             id={name}
             name={name}

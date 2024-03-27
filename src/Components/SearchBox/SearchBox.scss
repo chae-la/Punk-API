@@ -1,0 +1,11 @@
+@use "../../Styles/reset" as *;
+@use "../../Styles/color" as *;
+
+.search-box{
+    margin: 20px;
+    &__input{
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 4px;
+    }
+}

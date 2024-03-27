@@ -2,7 +2,7 @@
 @use "../../Styles/color" as *;
 
 .card{
-    padding: 20px;
+    padding: 25px;
 }
 .card-container {
     display: flex;
@@ -11,7 +11,7 @@
     align-items: center;
     width: 100%;
     padding: 20px;
-    border: 1px solid black; // change this.
+    box-shadow: 0 0.625rem 1.25rem rgba($black-color, 0.25);
     &__image{
         width: 8rem;
     }
