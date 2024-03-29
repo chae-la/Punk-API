@@ -57,21 +57,21 @@ const FilterTab = () => {
         <div className="filter-tab__button" onClick={handleClick}>
         <Button label="Filter"/>
         </div>
-        <div>
+        <div className="filter__container">
             {showFilter && (
             <div className="filter-options">
-                <div className="filter-options__first-brewed">
-                    <h4>First Brewed</h4>
+                <div className="filter-options__container filter-options__container--first-brewed">
+                    <h4 className="filter-options__heading">First Brewed</h4>
                     <RadioButton label="Modern Range" groupName="firstBrewed" value={modernRange} />
                     <RadioButton label="Classic Range" groupName="firstBrewed" value={classicRange} />
                 </div>
-                <div className="filter-options__ABV">
-                    <h4>Alcohol By Volume </h4>
+                <div className="filter-options__container filter-options__container--ABV">
+                    <h4 className="filter-options__heading">Alcohol By Volume </h4>
                     <RadioButton label="High ABV" groupName="ABV" value={highABV}/>
                     <RadioButton label="Low ABV" groupName="ABV" value={lowABV}/>
                 </div>
-                <div className="filter-options__acid">
-                    <h4>Acidity</h4>
+                <div className="filter-options__container filter-options__container--acid">
+                    <h4 className="filter-options__heading">Acidity</h4>
                     <RadioButton label="Strong Acid" groupName="acid" value={strongAcid}/>
                     <RadioButton label="Weak Acid" groupName="acid" value={weakAcid}/>
                 </div>

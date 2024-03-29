@@ -43,8 +43,7 @@ const SearchBeers = () => {
           <Card
             name={alcohol.name}
             description={alcohol.description}
-            image={alcohol.image_url}
-          />
+            image={alcohol.image_url} food_pairing={[]}          />
         ))}
       </div>
     </div>

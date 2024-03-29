@@ -9,9 +9,9 @@ type RadioButtonProps = {
 
 const RadioButton = ({label, value, groupName}: RadioButtonProps) => {
   return(
-    <div>
-      <input type="radio" id={label} name={groupName} value={value}/>
-      <label htmlFor={label}>{label}</label>
+    <div className="radio-button">
+      <input className="radio-button__input" type="radio" id={label} name={groupName} value={value}/>
+      <label className="radio-button__label" htmlFor={label}>{label}</label>
 
     </div>
 ) };

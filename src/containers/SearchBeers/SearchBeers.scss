@@ -3,5 +3,20 @@
 
 .searchbeer__filter{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    width: 80%;
+}
+
+@media screen and (min-width: 768px) {
+    .searchbeer__filter{
+        width: 85%;
+       margin: 5px 25px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .searchbeer__filter{
+        width: 86.5%;
+       margin: 10px 25px;
+    }
 }
