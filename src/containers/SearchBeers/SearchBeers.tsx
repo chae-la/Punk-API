@@ -2,6 +2,10 @@ import { FormEvent, useState } from "react";
 import SearchBox from "../../Components/SearchBox/SearchBox";
 import Card from "../../Components/Card/Card";
 import beers from "../../Data/beers";
+import "./SearchBeers.scss"
+import FilterTab from "../FilterTab/FilterTab";
+
+
 
 const SearchBeers = () => {
   const [searchInput, setSearchInput] = useState<string>("");
@@ -16,14 +20,16 @@ const SearchBeers = () => {
   });
 
   return (
+
     <div className="searchbeer">
-      <SearchBox
-        name="Beers"
+      <div className="searchbeer__filter">
+        <SearchBox name="Beers"
         searchTerm={searchInput}
-        handleInput={handleInput}
-      />
+        handleInput={handleInput}/>
+        <FilterTab />
+      </div>
       <div>
-        {handleSearchBeers.map((alcohol) => (
+      {handleSearchBeers.map((alcohol) => (
           <Card
             name={alcohol.name}
             description={alcohol.description}

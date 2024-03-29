@@ -4,6 +4,7 @@
 .app{
 display: flex;
 flex-direction: column;
+flex-wrap: wrap;
 &__heading{
     padding-left: 20px;
     padding-top: 20px;

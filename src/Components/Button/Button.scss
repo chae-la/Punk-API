@@ -1,0 +1,16 @@
+@use "../../Styles/reset" as *;
+@use "../../Styles/color" as *;
+
+.button{
+    width: 5rem;
+    height: 2rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 1rem;
+    background-color: $white-color;
+    &:hover{
+        cursor: pointer;
+        background-color: $primary-color;
+        border: none;
+        transition: 0.3s ease-in-out;
+    }
+}

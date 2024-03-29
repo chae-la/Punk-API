@@ -1,0 +1,7 @@
+@use "../../Styles/reset" as *;
+@use "../../Styles/color" as *;
+
+.searchbeer__filter{
+    display: flex;
+    align-items: center;
+}
