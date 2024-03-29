@@ -1,0 +1,9 @@
+@use "../../Styles/reset" as *;
+@use "../../Styles/color" as *;
+
+.filter-options{
+    background-color: $secondary-color;
+    color: $white-color;
+    font-size: 0.7rem;
+    
+}

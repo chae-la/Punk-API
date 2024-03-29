@@ -13,4 +13,7 @@ flex-wrap: wrap;
     height: 75px;
     font-size: 1.6rem;
 }
+::selection{
+    background-color: $primary-color;
+}
 }

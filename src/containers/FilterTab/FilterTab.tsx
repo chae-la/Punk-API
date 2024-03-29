@@ -2,11 +2,10 @@ import beers from "../../Data/beers";
 import Button from "../../Components/Button/Button";
 import { useState } from "react";
 import RadioButton from "../../Components/RadioButton/RadioButton";
+import "./FilterTab.scss"
+
 
 const FilterTab = () => {
-  // each must have radio buttons that filter them.
-    // show and hide filter tab when  selected. => state
-
     const [showFilter, setShowFilter] = useState<boolean>(false);
     const handleClick = () => {
         setShowFilter(!showFilter)
@@ -44,7 +43,6 @@ const FilterTab = () => {
   });
 
   // filter for acidity
-
   const strongAcid = beers.filter((beer) => {
     return beer.ph <= 3.9;
   });
@@ -80,9 +78,6 @@ const FilterTab = () => {
             </div>
         )}
         </div>
-        
-    
-
     </div>
   )
 };
