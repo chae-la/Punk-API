@@ -4,14 +4,16 @@ import Button from "../Button/Button";
 import cross from "../../assets/images/black-cross.png"
 
 
+
 type CardProps = {
   name: string;
   description: string;
   image: string;
   food_pairing :string[];
+  brewer_tips: string;
 };
 
-const Card = ({ name, description, image, food_pairing }: CardProps) => {
+const Card = ({ name, description, image, food_pairing, brewer_tips }: CardProps) => {
 const [showBack, setShowBack] = useState<boolean>(false);
 const handleClick = () => {
   setShowBack(!showBack)
@@ -25,18 +27,17 @@ const frontContent = (
 
 const backContent = (
   <>
-  <img src={cross} className="card__cross" onClick={handleClick} alt="Close Text"/>
-  <h3>Food Pairings</h3>
-  <p>Pairs well with... 
-    <ul>
-      <li>{food_pairing}</li>
-      <li>{food_pairing}</li>
-      <li>{food_pairing}</li>
-    </ul>
-    </p>
-  {/* <h4>Ingredients</h4> */}
+    <img src={cross} className="card__cross" onClick={handleClick} alt="Close Text" />
+    <h3 >Pairs well with... </h3>
+      <ul className="card__content card__content--back-pairs">
+      {food_pairing.map((pairing, index) => (
+          <li key={index} >{pairing}</li>
+        ))}
+        </ul>
+        <h3>Brewer's Tip</h3>
+          <p className="card__content card__content--back-tip">{brewer_tips}</p>
   </>
-)
+);
 
 let contentClassName = "card__content";
 if (showBack) contentClassName += " card__content--back";
