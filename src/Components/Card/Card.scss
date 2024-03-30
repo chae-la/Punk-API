@@ -14,7 +14,7 @@
     position: relative;
     overflow: hidden;
     box-shadow: 0 0.625rem 1.25rem rgba($black-color, 0.25);
-    
+    border-radius: 10px;
     &__image {
       height: 10rem;
       margin-bottom: 20px;
@@ -68,6 +68,7 @@
       bottom: 0;
       left: 0;
       right: 0;
+      
     }
   }
 }
