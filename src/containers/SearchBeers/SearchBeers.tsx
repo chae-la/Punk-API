@@ -4,6 +4,7 @@ import Card from "../../Components/Card/Card";
 import "./SearchBeers.scss";
 import FilterTab from "../FilterTab/FilterTab";
 import API from "../../Data/API.json";
+import fallback from "../../assets/images/fallback.png"
 
 const SearchBeers = () => {
   const [searchInput, setSearchInput] = useState<string>("");
@@ -26,7 +27,7 @@ const SearchBeers = () => {
   //   const input = event.currentTarget.value;
   //   setBeerFilter(input)
   // }
-
+ 
 
   return (
     <div className="searchbeer">
@@ -35,7 +36,7 @@ const SearchBeers = () => {
           name="Beers"
           searchTerm={searchInput}
           handleInput={handleInput}
-        />
+          />
         <FilterTab />
       </div>
       <div>
@@ -44,7 +45,7 @@ const SearchBeers = () => {
             key={alcohol.id}
             name={alcohol.name}
             description={alcohol.description}
-            image={alcohol.image_url ?? `No image available`} food_pairing={alcohol.food_pairing} brewer_tips={alcohol.brewers_tips} />
+            image={alcohol.image_url ?? fallback } food_pairing={alcohol.food_pairing} brewer_tips={alcohol.brewers_tips} />
         ))}
       </div>
     </div>
