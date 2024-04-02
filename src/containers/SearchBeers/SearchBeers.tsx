@@ -1,9 +1,9 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import SearchBox from "../../Components/SearchBox/SearchBox";
 import Card from "../../Components/Card/Card";
-import beers from "../../Data/beers";
 import "./SearchBeers.scss";
 import FilterTab from "../FilterTab/FilterTab";
+import API from "../../Data/API.json";
 
 const SearchBeers = () => {
   const [searchInput, setSearchInput] = useState<string>("");
@@ -14,7 +14,7 @@ const SearchBeers = () => {
     setSearchInput(input);
   };
 
-  const handleSearchBeers = beers.filter((beer) => {
+  const handleSearchBeers = API.filter((beer) => {
     return beer.name.toLowerCase().includes(searchInput);
   });
 
@@ -41,9 +41,10 @@ const SearchBeers = () => {
       <div>
         {handleSearchBeers.map((alcohol) => (
           <Card
+            key={alcohol.id}
             name={alcohol.name}
             description={alcohol.description}
-            image={alcohol.image_url} food_pairing={alcohol.food_pairing} brewer_tips={alcohol.brewers_tips} />
+            image={alcohol.image_url ?? `No image available`} food_pairing={alcohol.food_pairing} brewer_tips={alcohol.brewers_tips} />
         ))}
       </div>
     </div>

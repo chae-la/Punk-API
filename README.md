@@ -1,30 +1,58 @@
-# React + TypeScript + Vite
+# Punk API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Language(s) Used
 
-Currently, two official plugins are available:
+1. Typescript: 5.2.2
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Dev Dependencies
 
-## Expanding the ESLint configuration
+1. SASS: 1.71.1
+2. Vite: 5.1.4
+3. Typescript: 5.2.2
+4. React: 18.2.0
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Table of Contnets
 
-- Configure the top-level `parserOptions` property like this:
+- [Introduction](#introduction)
+- [Punk-API Preview](#Punk-api-preview)
+- [Code Snippet](#code-snippet)
+- [Setup](#setup)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
+## Introduction
+
+Brewdog's vast menu of specially brewed IPAs in a tidied API where you're able to search for a specific drink or use the filters to find a drink that is perfect for you.
+
+## Punk-API Preview
+
+![An image of the webpage](/src/assets/images/webpage-screenshot.png "image of webpage in mobile view")
+
+## Features
+
+- Able to look through the whole catalogue of drink Brewdog's has to offer.
+- Search for a specific drink in the "Explore Our Collection..." input menu
+- Filter using three options, including ABV, acidity and first-brewed.
+- In the "More" section, user is able to see what foods the drink pairs well with and also any tip's the brewer has.
+
+## Code Snippet
+
+```import "./Button.scss";
+
+type ButtonProps ={
+    label: string;
 }
+
+const Button = ({label}: ButtonProps) => {
+    return(
+        <button className="button">{label}</button>
+    )
+}
+export default Button;
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Components are essential in building webpages and webapps in React, they are reusuable and ensures the code is clean and easy to read. The copmponents should usually be simple, for that reusability, and customisable if changes are to be made. This "Button" component is at its most basic. it isused in the "FilterTab" container and "Card" component. 
+
+## Setup
+
+1. Clone this repository to your local machine.
+2. Navigate to the "src" folder to find the Typescript, if changes are desired.
+3. Open a new terminal and type "npm run dev"
