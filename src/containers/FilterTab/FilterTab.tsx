@@ -107,10 +107,12 @@ type FilterTabProps = {
 
 const FilterTab = ({handleChange}: FilterTabProps) => {
     const [showFilter, setShowFilter] = useState<boolean>(false);
+   
+
     const handleClick = () => {
         setShowFilter(!showFilter)
     }
-    
+   
 
   return(
     <div className="filter-tab" >

@@ -6,10 +6,10 @@ type RadioButtonProps = {
   label: string;
   value: any;
   groupName: string;
-  handleChange: ChangeEventHandler<HTMLInputElement>;
+  handleChange: ChangeEventHandler<HTMLInputElement>
 }
 
-const RadioButton = ({label, value, groupName, handleChange}: RadioButtonProps) => {
+const RadioButton = ({label, value, groupName,  handleChange}: RadioButtonProps) => {
   return(
     <div className="radio-button">
       <input onChange={handleChange} className="radio-button__input" type="radio" id={label} name={groupName} value={value}/>
