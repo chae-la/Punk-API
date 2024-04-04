@@ -1,0 +1,37 @@
+@use "../../Styles/reset" as *;
+@use "../../Styles/color" as *;
+
+.nav {
+  &__image {
+    width: 2rem;
+    border: 2px solid $black-color;
+    padding: 5px;
+    position: fixed;
+    right: 5px;
+    top: 90%;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    &__image {
+      width: 2.9rem;
+      height: 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    &__image {
+      width: 3rem;
+      height: 2.5rem;
+      &:hover {
+        background-color: $primary-color;
+        border: $primary-color;
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+}
