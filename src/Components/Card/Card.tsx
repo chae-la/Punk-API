@@ -11,9 +11,12 @@ type CardProps = {
   image: string;
   food_pairing :string[];
   brewer_tips: string;
+  abv: number;
+  firstBrewed: string;
+  acid: number;
 };
 
-const Card = ({ name, description, image, food_pairing, brewer_tips }: CardProps) => {
+const Card = ({ name, description, image, food_pairing, brewer_tips, abv, firstBrewed, acid }: CardProps) => {
 const [showBack, setShowBack] = useState<boolean>(false);
 const handleClick = () => {
   setShowBack(!showBack)
@@ -50,6 +53,9 @@ if (showBack) contentClassName += " card__content--back";
     className="card-container__image"/>
     <h2 className="card-container__heading">{name}</h2>
     <p className="card-container__description">{description}</p>
+    <p className="card-container__info card-container__info--abv">ABV: {abv}%</p>
+    <p className="card-container__info card-container__info--first-brewed">First Brewed: {firstBrewed}</p>
+    <p className="card-container__info card-container__info--acid">Acidity: {acid ?? "N/A"}</p>
     <div className={contentClassName}>
     {showBack ? backContent : frontContent}
     </div>

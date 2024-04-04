@@ -1,23 +1,23 @@
 @use "../../Styles/reset" as *;
 @use "../../Styles/color" as *;
 
-.search-box{
-    margin: 10px 25px;
-    &__input{
-        border-style: solid;
-        border-width: 2px;
-        border-radius: 4px;
-    }
+.search-box {
+  margin: 10px 25px;
+  &__input {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 4px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-    .search-box__input{
-        font-size: 1.3rem;
-    }
+  .search-box__input {
+    font-size: 1.3rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .search-box__input{
-        font-size: 1.5rem;
-    }
+  .search-box__input {
+    font-size: 1.5rem;
+  }
 }

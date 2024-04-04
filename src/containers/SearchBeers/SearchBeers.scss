@@ -1,23 +1,25 @@
 @use "../../Styles/reset" as *;
 @use "../../Styles/color" as *;
 
-.searchbeer__filter{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-   
+.searchbeer__filter {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  &--result-num {
+    margin-left: 25px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-    .searchbeer__filter{
-        width: 85%;
-       margin: 5px 25px;
-    }
+  .searchbeer__filter {
+    width: 85%;
+    margin: 5px 25px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .searchbeer__filter{
-        width: 86.5%;
-       margin: 10px 25px;
-    }
+  .searchbeer__filter {
+    width: 86.5%;
+    margin: 10px 25px;
+  }
 }
