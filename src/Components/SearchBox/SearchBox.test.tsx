@@ -17,4 +17,6 @@ it("should render the placeholder text in the search bar", () => {
     /Explore Our Collection.../i
   );
   expect(searchBoxInput).toBeTruthy();
+  expect(searchBoxInput).toBeInTheDocument();
+
 });
