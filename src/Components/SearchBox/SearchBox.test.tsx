@@ -13,6 +13,8 @@ it("should render the placeholder text in the search bar", () => {
     />
   );
 
-  const searchBoxInput = screen.getByPlaceholderText(/Explore Our Collection.../i);
-  expect(searchBoxInput).toBeTruthy()
+  const searchBoxInput = screen.getByPlaceholderText(
+    /Explore Our Collection.../i
+  );
+  expect(searchBoxInput).toBeTruthy();
 });

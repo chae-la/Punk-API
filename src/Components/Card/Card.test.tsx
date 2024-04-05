@@ -29,7 +29,7 @@ describe("should render card", () => {
     render(
       <Card
         name={"Test Name"}
-        description={"Test Description"}
+        description={"Test Description"} 
         image={"test-image.jpg"}
         food_pairing={["test"]}
         brewer_tips={"Test Brewer Tips"}
@@ -46,12 +46,24 @@ describe("should render card", () => {
     expect(backContent).toBeTruthy();
   });
 
-    it("should show more content if the more button is pressed", async () => {
-        const button = screen.getByRole("Button", {name : /More.../i});
-        await userEvent.click(button);
-        
-        const backBrewerTips = screen.getByText(/Test Brewer Tips/i);
-        expect(backBrewerTips).toBeInTheDocument
-    })
+  it("should show more content if the more button is pressed", async () => {
+    render(<Card
+        name={"Test Name"}
+        description={"Test Description"} 
+        image={"test-image.jpg"}
+        food_pairing={["test"]}
+        brewer_tips={"Test Brewer Tips"}
+        abv={0}
+        firstBrewed={"Test Date"}
+        acid={0}
+      />
+    );
+
+    const button = screen.getByRole("button", { name: /More.../i });
+    await userEvent.click(button);
+    
+    const backBrewerTips = screen.getByText(/Test Brewer Tips/i);
+    expect(backBrewerTips).toBeInTheDocument(); 
+});
  
 });
