@@ -6,6 +6,7 @@ import FilterTab from "../FilterTab/FilterTab";
 import API from "../../Data/API.json";
 import fallback from "../../assets/images/fallback.png";
 
+
 const SearchBeers = () => {
   const [searchInput, setSearchInput] = useState<string>("");
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);

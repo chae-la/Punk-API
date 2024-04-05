@@ -2,6 +2,7 @@ import Button from "../../Components/Button/Button";
 import { useState } from "react";
 import RadioButton from "../../Components/RadioButton/RadioButton";
 import "./FilterTab.scss";
+import Clear from "../../Components/Clear/clear";
 
 type FilterTabProps = {
   handleChange: (filterType: string) => void;
@@ -72,6 +73,9 @@ const FilterTab = ({ handleChange }: FilterTabProps) => {
                 groupName="acid"
                 value="Weak Acid"
               />
+            </div>
+            <div>
+              <Clear />
             </div>
           </div>
         )}
