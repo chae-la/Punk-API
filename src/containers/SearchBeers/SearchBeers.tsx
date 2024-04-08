@@ -66,6 +66,16 @@ const SearchBeers = () => {
 
   const filteredBeers = applyFilters(API);
 
+  const filterType = (type: string) => {
+    setSelectedFilters((prevFilters) => {
+      if (prevFilters.includes(type)) {
+        return prevFilters.filter((filter) => filter !== type);
+      } else {
+        return [...prevFilters, type];
+      }
+    });
+  };
+
   return (
     <div className="searchbeer">
       <div className="searchbeer__filter">
@@ -75,16 +85,7 @@ const SearchBeers = () => {
           handleInput={handleSearchInput}
         />
         <FilterTab
-          handleChange={(filterType) => {
-            setSelectedFilters((prevFilters) => {
-              if (prevFilters.includes(filterType)) {
-                return prevFilters.filter((filter) => filter !== filterType);
-              } else {
-                return [...prevFilters, filterType];
-              }
-            });
-          }}
-        />
+          handleChange={filterType}/>
         <h3 className="searchbeer__filter searchbeer__filter--result-num">
           Results: {filteredBeers.length}
         </h3>
